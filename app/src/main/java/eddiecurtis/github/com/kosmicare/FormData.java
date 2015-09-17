@@ -30,32 +30,37 @@ public class FormData {
         data.setConditionVerbal(Boolean.parseBoolean(values[17]));
         data.setConditionNonVerbal(Boolean.parseBoolean(values[18]));
         data.setConditionCalm(Boolean.parseBoolean(values[19]));
-        data.setSymptoms(values[20]);
-        data.setIssues(values[21]);
-        data.setTechniqueEffectiveListening(Boolean.parseBoolean(values[22]));
-        data.setTechniqueEffectiveTalking(Boolean.parseBoolean(values[23]));
-        data.setTechniqueEffectiveHugging(Boolean.parseBoolean(values[24]));
-        data.setTechniqueEffectiveSitting(Boolean.parseBoolean(values[25]));
-        data.setTechniqueEffectiveHoldingHands(Boolean.parseBoolean(values[26]));
-        data.setTechniqueEffectiveCreativeTherapy(Boolean.parseBoolean(values[27]));
-        data.setTechniqueEffectiveLeftAlone(Boolean.parseBoolean(values[28]));
-        data.setTechniqueEffectiveOther(Boolean.parseBoolean(values[29]));
-        data.setTechniqueIneffectiveListening(Boolean.parseBoolean(values[30]));
-        data.setTechniqueIneffectiveTalking(Boolean.parseBoolean(values[31]));
-        data.setTechniqueIneffectiveHugging(Boolean.parseBoolean(values[32]));
-        data.setTechniqueIneffectiveSitting(Boolean.parseBoolean(values[33]));
-        data.setTechniqueIneffectiveHoldingHands(Boolean.parseBoolean(values[34]));
-        data.setTechniqueIneffectiveCreativeTherapy(Boolean.parseBoolean(values[35]));
-        data.setTechniqueIneffectiveLeftAlone(Boolean.parseBoolean(values[36]));
-        data.setTechniqueIneffectiveOther(Boolean.parseBoolean(values[37]));
-        data.setTechniqueOtherText(values[38]);
-        data.setLeavingHour(values[39]);
-        data.setLeavingMinute(values[40]);
-        data.setDuration(values[41]);
-        data.setFeedback(values[42]);
-        data.setLeavingCondition(values[43]);
-        data.setIssuesResolution(values[44]);
-        data.setConclusion(values[45]);
+        data.setConditionUpset(Boolean.parseBoolean(values[20]));
+        data.setConditionParanoid(Boolean.parseBoolean(values[21]));
+        data.setConditionEgoLoss(Boolean.parseBoolean(values[22]));
+        data.setSymptoms(values[23]);
+        data.setIssues(values[24]);
+        data.setTechniqueEffectiveListening(Boolean.parseBoolean(values[25]));
+        data.setTechniqueEffectiveTalking(Boolean.parseBoolean(values[26]));
+        data.setTechniqueEffectiveHugging(Boolean.parseBoolean(values[27]));
+        data.setTechniqueEffectiveSitting(Boolean.parseBoolean(values[28]));
+        data.setTechniqueEffectiveHoldingHands(Boolean.parseBoolean(values[29]));
+        data.setTechniqueEffectiveCreativeTherapy(Boolean.parseBoolean(values[30]));
+        data.setTechniqueEffectiveLeftAlone(Boolean.parseBoolean(values[31]));
+        data.setTechniqueEffectiveOther(Boolean.parseBoolean(values[32]));
+        data.setTechniqueIneffectiveListening(Boolean.parseBoolean(values[33]));
+        data.setTechniqueIneffectiveTalking(Boolean.parseBoolean(values[34]));
+        data.setTechniqueIneffectiveHugging(Boolean.parseBoolean(values[35]));
+        data.setTechniqueIneffectiveSitting(Boolean.parseBoolean(values[36]));
+        data.setTechniqueIneffectiveHoldingHands(Boolean.parseBoolean(values[37]));
+        data.setTechniqueIneffectiveCreativeTherapy(Boolean.parseBoolean(values[38]));
+        data.setTechniqueIneffectiveLeftAlone(Boolean.parseBoolean(values[39]));
+        data.setTechniqueIneffectiveOther(Boolean.parseBoolean(values[40]));
+        data.setTechniqueOtherText(values[41]);
+        data.setArrivalHour(values[42]);
+        data.setArrivalMinute(values[43]);
+        data.setLeavingHour(values[44]);
+        data.setLeavingMinute(values[45]);
+        data.setDuration(values[46]);
+        data.setFeedback(values[47]);
+        data.setLeavingCondition(values[48]);
+        data.setIssuesResolution(values[49]);
+        data.setConclusion(values[50]);
         return data;
     }
 
@@ -101,6 +106,12 @@ public class FormData {
                 .append(DELIM)
                 .append(conditionCalm)
                 .append(DELIM)
+                .append(conditionUpset)
+                .append(DELIM)
+                .append(conditionParanoid)
+                .append(DELIM)
+                .append(conditionEgoLoss)
+                .append(DELIM)
                 .append(symptoms)
                 .append(DELIM)
                 .append(issues)
@@ -138,6 +149,10 @@ public class FormData {
                 .append(techniqueIneffectiveOther)
                 .append(DELIM)
                 .append(techniqueOtherText)
+                .append(DELIM)
+                .append(arrivalHour)
+                .append(DELIM)
+                .append(arrivalMinute)
                 .append(DELIM)
                 .append(leavingHour)
                 .append(DELIM)
@@ -179,6 +194,9 @@ public class FormData {
     private boolean conditionVerbal= false;
     private boolean conditionNonVerbal= false;
     private boolean conditionCalm= false;
+    private boolean conditionUpset = false;
+    private boolean conditionParanoid = false;
+    private boolean conditionEgoLoss = false;
     private String symptoms= "";
     private String issues= "";
     private boolean techniqueEffectiveListening= false;
@@ -198,6 +216,8 @@ public class FormData {
     private boolean techniqueIneffectiveLeftAlone= false;
     private boolean techniqueIneffectiveOther= false;
     private String techniqueOtherText= "";
+    private String arrivalHour= "";
+    private String arrivalMinute= "";
     private String leavingHour= "";
     private String leavingMinute= "";
     private String duration= "";
@@ -366,6 +386,30 @@ public class FormData {
         this.conditionCalm = conditionCalm;
     }
 
+    public boolean isConditionUpset() {
+        return conditionUpset;
+    }
+
+    public void setConditionUpset(boolean conditionUpset) {
+        this.conditionUpset = conditionUpset;
+    }
+
+    public boolean isConditionParanoid() {
+        return conditionParanoid;
+    }
+
+    public void setConditionParanoid(boolean conditionParanoid) {
+        this.conditionParanoid = conditionParanoid;
+    }
+
+    public boolean isConditionEgoLoss() {
+        return conditionEgoLoss;
+    }
+
+    public void setConditionEgoLoss(boolean conditionEgoLoss) {
+        this.conditionEgoLoss = conditionEgoLoss;
+    }
+
     public String getSymptoms() {
         return symptoms;
     }
@@ -516,6 +560,22 @@ public class FormData {
 
     public void setTechniqueOtherText(String techniqueOtherText) {
         this.techniqueOtherText = stripDelim(techniqueOtherText);
+    }
+
+    public String getArrivalHour() {
+        return arrivalHour;
+    }
+
+    public void setArrivalHour(String arrivalHour) {
+        this.arrivalHour = arrivalHour;
+    }
+
+    public String getArrivalMinute() {
+        return arrivalMinute;
+    }
+
+    public void setArrivalMinute(String arrivalMinute) {
+        this.arrivalMinute = arrivalMinute;
     }
 
     public String getLeavingHour() {

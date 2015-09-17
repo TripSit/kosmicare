@@ -261,6 +261,12 @@
                         android:layout_height="wrap_content"
                         android:text="Physically calm"
                         android:id="@+id/check_physically_calm" />
+
+                    <CheckBox
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Paranoid"
+                        android:id="@+id/check_paranoid" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -287,6 +293,17 @@
                         android:text="Calm"
                         android:id="@+id/check_calm" />
 
+                    <CheckBox
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Upset"
+                        android:id="@+id/check_upset" />
+
+                    <CheckBox
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Ego loss"
+                        android:id="@+id/check_ego_loss" />
 
                 </LinearLayout>
 
@@ -338,19 +355,28 @@
                         android:gravity="center_vertical"
                         android:text="Listening" />
 
-                    <CheckBox
+                <RadioGroup
+                    android:layout_width="0dp"
+                    android:layout_weight="2"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    >
+
+                    <RadioButton
                         android:layout_width="0dp"
                         android:layout_weight="1"
                         android:layout_height="wrap_content"
                         android:text="Effective"
                         android:id="@+id/check_effective_listening" />
 
-                    <CheckBox
+                    <RadioButton
                         android:layout_width="0dp"
                         android:layout_weight="1"
                         android:layout_height="wrap_content"
                         android:text="Ineffective"
                         android:id="@+id/check_ineffective_listening" />
+                </RadioGroup>
+
             </LinearLayout>
 
             <LinearLayout
@@ -366,19 +392,27 @@
                     android:gravity="center_vertical"
                     android:text="Talking" />
 
-                <CheckBox
+                <RadioGroup
                     android:layout_width="0dp"
-                    android:layout_weight="1"
+                    android:layout_weight="2"
                     android:layout_height="wrap_content"
-                    android:text="Effective"
-                    android:id="@+id/check_effective_talking" />
+                    android:orientation="horizontal"
+                    >
 
-                <CheckBox
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:layout_height="wrap_content"
-                    android:text="Ineffective"
-                    android:id="@+id/check_ineffective_talking" />
+                    <RadioButton
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:text="Effective"
+                        android:id="@+id/check_effective_talking" />
+
+                    <RadioButton
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:text="Ineffective"
+                        android:id="@+id/check_ineffective_talking" />
+                </RadioGroup>
 
             </LinearLayout>
 
@@ -395,19 +429,27 @@
                     android:gravity="center_vertical"
                     android:text="Hugging" />
 
-                <CheckBox
+                <RadioGroup
                     android:layout_width="0dp"
-                    android:layout_weight="1"
+                    android:layout_weight="2"
                     android:layout_height="wrap_content"
-                    android:text="Effective"
-                    android:id="@+id/check_effective_hugging" />
+                    android:orientation="horizontal"
+                    >
 
-                <CheckBox
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:layout_height="wrap_content"
-                    android:text="Ineffective"
-                    android:id="@+id/check_ineffective_hugging" />
+                    <RadioButton
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:text="Effective"
+                        android:id="@+id/check_effective_hugging" />
+
+                    <RadioButton
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:text="Ineffective"
+                        android:id="@+id/check_ineffective_hugging" />
+                </RadioGroup>
 
             </LinearLayout>
 
@@ -423,19 +465,27 @@
                     android:gravity="center_vertical"
                     android:text="Sitting with quietly" />
 
-                <CheckBox
+                <RadioGroup
                     android:layout_width="0dp"
-                    android:layout_weight="1"
+                    android:layout_weight="2"
                     android:layout_height="wrap_content"
-                    android:text="Effective"
-                    android:id="@+id/check_effective_sitting" />
+                    android:orientation="horizontal"
+                    >
 
-                <CheckBox
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:layout_height="wrap_content"
-                    android:text="Ineffective"
-                    android:id="@+id/check_ineffective_sitting" />
+                    <RadioButton
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:text="Effective"
+                        android:id="@+id/check_effective_sitting" />
+
+                    <RadioButton
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:text="Ineffective"
+                        android:id="@+id/check_ineffective_sitting" />
+                </RadioGroup>
 
             </LinearLayout>
 
@@ -452,19 +502,27 @@
                     android:gravity="center_vertical"
                     android:text="Holding hands/touch" />
 
-                <CheckBox
+                <RadioGroup
                     android:layout_width="0dp"
-                    android:layout_weight="1"
+                    android:layout_weight="2"
                     android:layout_height="wrap_content"
-                    android:text="Effective"
-                    android:id="@+id/check_effective_holding_hands" />
+                    android:orientation="horizontal"
+                    >
 
-                <CheckBox
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:layout_height="wrap_content"
-                    android:text="Ineffective"
-                    android:id="@+id/check_ineffective_holding_hands" />
+                    <RadioButton
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:text="Effective"
+                        android:id="@+id/check_effective_holding_hands" />
+
+                    <RadioButton
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:text="Ineffective"
+                        android:id="@+id/check_ineffective_holding_hands" />
+                </RadioGroup>
 
             </LinearLayout>
 
@@ -480,19 +538,28 @@
                     android:gravity="center_vertical"
                     android:text="Creative therapy" />
 
-                <CheckBox
+                <RadioGroup
                     android:layout_width="0dp"
-                    android:layout_weight="1"
+                    android:layout_weight="2"
                     android:layout_height="wrap_content"
-                    android:text="Effective"
-                    android:id="@+id/check_effective_creative_therapy" />
+                    android:orientation="horizontal"
+                    >
 
-                <CheckBox
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:layout_height="wrap_content"
-                    android:text="Ineffective"
-                    android:id="@+id/check_ineffective_creative_therapy" />
+                    <RadioButton
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:text="Effective"
+                        android:id="@+id/check_effective_creative_therapy" />
+
+                    <RadioButton
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:text="Ineffective"
+                        android:id="@+id/check_ineffective_creative_therapy" />
+                </RadioGroup>
+
             </LinearLayout>
 
             <LinearLayout
@@ -508,19 +575,27 @@
                     android:gravity="center_vertical"
                     android:text="Visitor wanted to be left alone" />
 
-                <CheckBox
+                <RadioGroup
                     android:layout_width="0dp"
-                    android:layout_weight="1"
+                    android:layout_weight="2"
                     android:layout_height="wrap_content"
-                    android:text="Effective"
-                    android:id="@+id/check_effective_left_alone" />
+                    android:orientation="horizontal"
+                    >
 
-                <CheckBox
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:layout_height="wrap_content"
-                    android:text="Ineffective"
-                    android:id="@+id/check_ineffective_left_alone" />
+                    <RadioButton
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:text="Effective"
+                        android:id="@+id/check_effective_left_alone" />
+
+                    <RadioButton
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:text="Ineffective"
+                        android:id="@+id/check_ineffective_left_alone" />
+                </RadioGroup>
 
             </LinearLayout>
 
@@ -537,19 +612,28 @@
                     android:gravity="center_vertical"
                     android:text="Other (specify below)" />
 
-                <CheckBox
+                <RadioGroup
                     android:layout_width="0dp"
-                    android:layout_weight="1"
+                    android:layout_weight="2"
                     android:layout_height="wrap_content"
-                    android:text="Effective"
-                    android:id="@+id/check_effective_other" />
+                    android:orientation="horizontal"
+                    >
 
-                <CheckBox
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:layout_height="wrap_content"
-                    android:text="Ineffective"
-                    android:id="@+id/check_ineffective_other" />
+                    <RadioButton
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:text="Effective"
+                        android:id="@+id/check_effective_other" />
+
+                    <RadioButton
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:text="Ineffective"
+                        android:id="@+id/check_ineffective_other" />
+                </RadioGroup>
+
             </LinearLayout>
 
             <EditText
@@ -557,6 +641,38 @@
                 android:layout_height="wrap_content"
                 android:inputType="textMultiLine"
                 android:id="@+id/txt_other_techniques" />
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="2"
+                    android:layout_height="fill_parent"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:gravity="center_vertical"
+                    android:text="Arrival time:" />
+
+                <Spinner
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/arrival_hour_spinner" />
+
+                <Spinner
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/arrival_minute_spinner" />
+
+                <Space
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
 
             <LinearLayout
                 android:orientation="horizontal"
@@ -601,7 +717,7 @@
                     android:layout_height="match_parent"
                     android:textAppearance="?android:attr/textAppearanceMedium"
                     android:gravity="center_vertical"
-                    android:text="Duration (minutes):" />
+                    android:text="Duration (hours):" />
 
                 <EditText
                     android:layout_width="wrap_content"
