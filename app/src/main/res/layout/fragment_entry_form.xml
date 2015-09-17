@@ -1,0 +1,672 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context=".EntryForm$PlaceholderFragment">
+
+    <TextView android:id="@+id/section_label" android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/scrollView" >
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:gravity="center_vertical"
+                    android:text="Date:" />
+
+                <Spinner
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/day_spinner" />
+
+                <Spinner
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/month_spinner" />
+
+
+                <Spinner
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/year_spinner" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:gravity="center_vertical"
+                    android:text="Event:" />
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:minWidth="200dp"
+                    android:id="@+id/txt_festival" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:gravity="center_vertical"
+                        android:text="Facilitator:" />
+
+                    <EditText
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:minWidth="200dp"
+                        android:id="@+id/txt_facilitator" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:gravity="center_vertical"
+                        android:text="Visitor:" />
+
+                    <EditText
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:minWidth="200dp"
+                        android:id="@+id/txt_visitor" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:gravity="center_vertical"
+                        android:text="Age:" />
+
+                    <EditText
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:ems="3"
+                        android:id="@+id/txt_age" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:gravity="right|center_vertical"
+                        android:text="Gender:" />
+
+                    <RadioGroup
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        >
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="fill_parent"
+                            android:text="Male"
+                            android:id="@+id/radio_male" />
+
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Female"
+                            android:id="@+id/radio_female" />
+                    </RadioGroup>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:gravity="center_vertical"
+                android:text="How did they arrive at Kosmicare:" />
+
+            <Spinner
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/arrived_spinner" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:gravity="center_vertical"
+                android:text="What is the reason for their visit:" />
+
+            <Spinner
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/reason_spinner" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/other_reason" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:gravity="center_vertical"
+                android:text="If drug related, describe the effects on arrival:" />
+
+            <Spinner
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/effects_spinner" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:gravity="center_vertical"
+                android:text="Describe the visitor's condition on arrival:" />
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <CheckBox
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Terrified"
+                        android:id="@+id/check_terrified" />
+
+                    <CheckBox
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Disturbed"
+                        android:id="@+id/check_disturbed" />
+
+                    <CheckBox
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Physically agitated"
+                        android:id="@+id/check_physically_agitated" />
+
+                    <CheckBox
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Physically calm"
+                        android:id="@+id/check_physically_calm" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <CheckBox
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Verbal"
+                        android:id="@+id/check_verbal" />
+
+                    <CheckBox
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Non Verbal"
+                        android:id="@+id/check_nonverbal" />
+
+                    <CheckBox
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Calm"
+                        android:id="@+id/check_calm" />
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:gravity="center_vertical"
+                android:text="Describe symptoms and any related medical history if known:" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textMultiLine"
+                android:id="@+id/txt_symptoms" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:gravity="center_vertical"
+                android:text="What emotional/psychological issues was the person experiencing upon arrival and during their stay?" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textMultiLine"
+                android:id="@+id/txt_issues" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:gravity="center_vertical"
+                android:text="Therapeutic techniques used with the visitor:" />
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:gravity="center_vertical"
+                        android:text="Listening" />
+
+                    <CheckBox
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:text="Effective"
+                        android:id="@+id/check_effective_listening" />
+
+                    <CheckBox
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:text="Ineffective"
+                        android:id="@+id/check_ineffective_listening" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="fill_parent"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:gravity="center_vertical"
+                    android:text="Talking" />
+
+                <CheckBox
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="Effective"
+                    android:id="@+id/check_effective_talking" />
+
+                <CheckBox
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="Ineffective"
+                    android:id="@+id/check_ineffective_talking" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="fill_parent"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:gravity="center_vertical"
+                    android:text="Hugging" />
+
+                <CheckBox
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="Effective"
+                    android:id="@+id/check_effective_hugging" />
+
+                <CheckBox
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="Ineffective"
+                    android:id="@+id/check_ineffective_hugging" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="fill_parent"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:gravity="center_vertical"
+                    android:text="Sitting with quietly" />
+
+                <CheckBox
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="Effective"
+                    android:id="@+id/check_effective_sitting" />
+
+                <CheckBox
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="Ineffective"
+                    android:id="@+id/check_ineffective_sitting" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="fill_parent"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:gravity="center_vertical"
+                    android:text="Holding hands/touch" />
+
+                <CheckBox
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="Effective"
+                    android:id="@+id/check_effective_holding_hands" />
+
+                <CheckBox
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="Ineffective"
+                    android:id="@+id/check_ineffective_holding_hands" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="fill_parent"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:gravity="center_vertical"
+                    android:text="Creative therapy" />
+
+                <CheckBox
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="Effective"
+                    android:id="@+id/check_effective_creative_therapy" />
+
+                <CheckBox
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="Ineffective"
+                    android:id="@+id/check_ineffective_creative_therapy" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="fill_parent"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:gravity="center_vertical"
+                    android:text="Visitor wanted to be left alone" />
+
+                <CheckBox
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="Effective"
+                    android:id="@+id/check_effective_left_alone" />
+
+                <CheckBox
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="Ineffective"
+                    android:id="@+id/check_ineffective_left_alone" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="fill_parent"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:gravity="center_vertical"
+                    android:text="Other (specify below)" />
+
+                <CheckBox
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="Effective"
+                    android:id="@+id/check_effective_other" />
+
+                <CheckBox
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="Ineffective"
+                    android:id="@+id/check_ineffective_other" />
+            </LinearLayout>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textMultiLine"
+                android:id="@+id/txt_other_techniques" />
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="2"
+                    android:layout_height="fill_parent"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:gravity="center_vertical"
+                    android:text="Leaving time:" />
+
+                <Spinner
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/hour_spinner" />
+
+                <Spinner
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/minute_spinner" />
+
+                <Space
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:gravity="center_vertical"
+                    android:text="Duration (minutes):" />
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:ems="3"
+                    android:id="@+id/txt_duration" />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:gravity="center_vertical"
+                android:text="Feedback from the visitor about help given:" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textMultiLine"
+                android:id="@+id/txt_feedback" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:gravity="center_vertical"
+                android:text="Describe the overall mental/emotional state of the visitor upon leaving Kosmicare:" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textMultiLine"
+                android:id="@+id/txt_mental_state_leaving" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:gravity="center_vertical"
+                android:text="Describe the resolution of any emotional/psychological issues:" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textMultiLine"
+                android:id="@+id/txt_resolution" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:gravity="center_vertical"
+                android:text="Conclusion:" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textMultiLine"
+                android:id="@+id/txt_conclusion" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>
