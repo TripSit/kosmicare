@@ -107,7 +107,7 @@ public class NavigationDrawerFragment extends Fragment {
     private void refreshHeadings() {
         String[] headings = FileManager.instance().getVisitorHeadings();
 
-        if ( fileCount < headings.length ) {
+        if ( fileCount != headings.length ) {
             fileCount = headings.length;
 
             mDrawerListView.setAdapter(new ArrayAdapter<String>(
