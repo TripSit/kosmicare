@@ -58,6 +58,8 @@ public class NavigationDrawerFragment extends Fragment {
     private boolean mFromSavedInstanceState;
     private boolean mUserLearnedDrawer;
 
+    private int fileCount = -1;
+
     public NavigationDrawerFragment() {
     }
 
@@ -97,13 +99,23 @@ public class NavigationDrawerFragment extends Fragment {
                 selectItem(position);
             }
         });
-        mDrawerListView.setAdapter(new ArrayAdapter<String>(
-                getActionBar().getThemedContext(),
-                android.R.layout.simple_list_item_activated_1,
-                android.R.id.text1,
-                FileManager.instance().getVisitorHeadings()));
         mDrawerListView.setItemChecked(mCurrentSelectedPosition, true);
+        refreshHeadings();
         return mDrawerListView;
+    }
+
+    private void refreshHeadings() {
+        String[] headings = FileManager.instance().getVisitorHeadings();
+
+        if ( fileCount < headings.length ) {
+            fileCount = headings.length;
+
+            mDrawerListView.setAdapter(new ArrayAdapter<String>(
+                    getActionBar().getThemedContext(),
+                    android.R.layout.simple_list_item_activated_1,
+                    android.R.id.text1,
+                    headings));
+        }
     }
 
     public boolean isDrawerOpen() {
@@ -162,6 +174,8 @@ public class NavigationDrawerFragment extends Fragment {
                             .getDefaultSharedPreferences(getActivity());
                     sp.edit().putBoolean(PREF_USER_LEARNED_DRAWER, true).apply();
                 }
+
+                refreshHeadings();
 
                 getActivity().supportInvalidateOptionsMenu(); // calls onPrepareOptionsMenu()
             }
