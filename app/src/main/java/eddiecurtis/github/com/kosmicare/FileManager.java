@@ -37,12 +37,15 @@ class FileManager {
 
     private void refreshFileMap() {
         fileMap = new TreeMap<Integer, File>();
-        for (File file : getSaveDirectory().listFiles()) {
-            try {
-                Integer id = new Integer(getId(file));
-                fileMap.put(id, file);
-            } catch (Exception e) {
-                // ignore
+        File[] files = getSaveDirectory().listFiles();
+        if ( files != null ) {
+            for (File file : files) {
+                try {
+                    Integer id = new Integer(getId(file));
+                    fileMap.put(id, file);
+                } catch (Exception e) {
+                    // ignore
+                }
             }
         }
     }
