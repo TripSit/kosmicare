@@ -13,4 +13,6 @@
     <string name="action_save">Save current record</string>
     <string name="action_delete">Delete current record</string>
     <string name="action_new">New record</string>
+    <string name="drugs_taken">Drugs taken:</string>
+    <string name="approximate_time_drugs_taken">Approximate time drugs taken:</string>
 </resources>

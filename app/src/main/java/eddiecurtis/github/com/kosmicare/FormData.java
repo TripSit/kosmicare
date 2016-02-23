@@ -61,6 +61,8 @@ public class FormData {
         data.setLeavingCondition(values[48]);
         data.setIssuesResolution(values[49]);
         data.setConclusion(values[50]);
+        data.setDrugsTaken(values[51]);
+        data.setApproximateTimeDrugsTaken(values[52]);
         return data;
     }
 
@@ -166,7 +168,11 @@ public class FormData {
                 .append(DELIM)
                 .append(issuesResolution)
                 .append(DELIM)
-                .append(conclusion);
+                .append(conclusion)
+                .append(DELIM)
+                .append(drugsTaken)
+                .append(DELIM)
+                .append(approximateTimeDrugsTaken);
         return sb.toString();
     }
 
@@ -186,6 +192,8 @@ public class FormData {
     private String arrival= "";
     private String reason= "";
     private String reasonOtherText= "";
+    private String drugsTaken = "";
+    private String approximateTimeDrugsTaken = "";
     private String effects= "";
     private boolean conditionTerrified= false;
     private boolean conditionDisturbed= false;
@@ -632,5 +640,21 @@ public class FormData {
 
     public void setConclusion(String conclusion) {
         this.conclusion = stripDelim(conclusion);
+    }
+
+    public void setDrugsTaken(String drugsTaken) {
+        this.drugsTaken = drugsTaken;
+    }
+
+    public String getDrugsTaken() {
+        return drugsTaken;
+    }
+
+    public void setApproximateTimeDrugsTaken(String approximateTimeDrugsTaken) {
+        this.approximateTimeDrugsTaken = approximateTimeDrugsTaken;
+    }
+
+    public String getApproximateTimeDrugsTaken() {
+        return approximateTimeDrugsTaken;
     }
 }
