@@ -235,6 +235,8 @@ public class EntryForm extends ActionBarActivity
             setSpinner(R.id.arrived_spinner, data.getArrival());
             setSpinner(R.id.reason_spinner, data.getReason());
             setEditText(R.id.other_reason, data.getReasonOtherText());
+            setEditText(R.id.txt_drugs_taken, data.getDrugsTaken());
+            setEditText(R.id.txt_approximate_time_drugs_taken, data.getApproximateTimeDrugsTaken());
             setSpinner(R.id.effects_spinner, data.getEffects());
             setCheckBox(R.id.check_terrified, data.isConditionTerrified());
             setCheckBox(R.id.check_disturbed, data.isConditionDisturbed());
@@ -342,6 +344,8 @@ public class EntryForm extends ActionBarActivity
         data.setArrival(spinnerText(R.id.arrived_spinner));
         data.setReason(spinnerText(R.id.reason_spinner));
         data.setReasonOtherText(editTextText(R.id.other_reason));
+        data.setDrugsTaken(editTextText(R.id.txt_drugs_taken));
+        data.setApproximateTimeDrugsTaken(editTextText(R.id.txt_approximate_time_drugs_taken));
         data.setEffects(spinnerText(R.id.effects_spinner));
         data.setConditionTerrified(checkBoxSelected(R.id.check_terrified));
         data.setConditionDisturbed(checkBoxSelected(R.id.check_disturbed));
